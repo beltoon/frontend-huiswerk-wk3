@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@100;300&display=swap');
+
+/* 1. Global Styles */
+
+*{
+    box-sizing: border-box;
+    max-width: 800px;
+    margin:auto;
+    }
+
+img {
+    max-width: 400px;
+}
+
+li  {
+    list-style-type: none;
+}
+
+/* Color */
+:root {
+    --paars: #5722CD;
+    --wit: #fff;
+    --lichtgrijs: #F3F6F9;
+    --grijs: #7A7A7A;
+    --roze: #ED4385;
+}
+
+/* 2. Typography */
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+}
+
+p{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+li {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h5 {
+    margin: 1em 3em;
+
+}
+
+h4 {
+    font-size: x-small;
+    padding: 0.6em 0;
+}
+
+h5 {
+    font-family: Roboto;
+}
+
+h2 {
+    color: var(--paars);
+    margin: 1em 3em;
+}
+
+h3 {
+    margin: 10% 0;
+}
+
+/* 3. Layout */
+
+.content-container{
+    padding: 30px 0;
+    text-align: center;
+}
+
+button  {
+    text-transform: uppercase;
+    border-style: none;
+    color: var(--wit);
+    background-color: var(--roze);
+    font-size: xx-small;
+    border-radius: 25px;
+    padding: 1em 3em;
+    margin: 2em;
+ }
+
+/* 4. Areas */
+
+/* 4.1 nav */
+nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 30px;
+    padding-top:10px
+}
+
+nav a:link {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* 4.2 Header */
+header {
+
+}
+.header-container{
+    color: var(--wit);
+    background: linear-gradient(133deg, rgba(77,29,182,1) 0%, rgba(43,11,112,1) 100%);
+    position: relative;
+}
+
+.header-container img {
+    z-index: 1;
+    position: absolute;
+    top: 95%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+    width: 50px;
+}
+
+.header-container button {
+    margin-bottom: 10em;
+}
+
+@media only screen and (min-width: 600px) {
+    .schuin {
+        position: absolute;
+        bottom: -1px;
+        border-left: 800px solid transparent;
+        border-bottom: 20px solid var(--wit);
+    }
+}
+
+/* 4.3 Projects */
+
+.projects-container {
+    background-color: var(--lichtgrijs);
+    flex-grow: 1;
+}
+
+.project-img {
+
+    filter: drop-shadow(0 10px 4px darkgrey);
+    object-fit: scale-down;
+    min-width: 300px;
+    margin: 2em;
+}
+
+h3 + img {
+    width: 50px;
+    margin: 10px 0px;
+}
+
+.projects-container > article {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+.projects-container div {
+    padding: 1em;
+}
+
+.projects-container p {
+    margin: 10% 0;
+    max-width: 18em;
+}
+
+.projects-container a {
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: xx-small;
+    text-decoration: none;
+    color:var(--paars);
+}
+
+.link-effect:hover {
+
+}
+
+.article-left {
+    flex-direction: row;
+}
+
+.article-right {
+    flex-direction: row-reverse;
+}
+
+/* 4.4 Services */
+.service-container {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 30px;
+    margin: 0 !important;
+    float: none !important;
+}
+
+.icon {
+    height: 2em;
+    fill: var(--paars);
+}
+
+.service-container > article > div {
+    display: inline-block;
+    vertical-align:middle;
+    text-align: start;
+    height: 240px;
+    width: 14em;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid var(--paars);
+}
+
+.service-container p {
+    color: var(--grijs);
+    font-size: 0.7em;
+    vertical-align: top;
+}
+
+.form-container {
+    position: relative;
+    color: var(--wit);
+    background: rgb(77,29,182);
+    background: linear-gradient(36deg, rgba(77,29,182,1) 0%, rgba(43,11,112,1) 100%);
+    display: flex;
+}
+
+.form-container p {
+    padding-bottom: 30px;
+}
+
+.form-flex label {
+    display: flex;
+    padding-top: 10px;
+}
+
+.form-flex button {
+    margin-bottom: 0;
+}
+
+#name-field {
+    width: 100%;
+}
+
+#email-field {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: var(--wit);
+    background-color: black;
+}
+
+footer > p {
+    font-size: 8px;
+    padding: 10px;
+}
+
+#message-field {
+    height: 100px;
+    text-align: start;
+}
+
